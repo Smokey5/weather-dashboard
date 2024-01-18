@@ -2,7 +2,9 @@ unique_ids:
   forms:
     Form1: R6HXPLI7NRY4WL5JW66Q6DMAM5OYSC3C
   modules: {}
-  server_modules: {}
+  server_modules:
+    ServerModule1: '1705597061763764434748986.0317'
   assets:
+    icons8-partly-cloudy-day-96.png: '1705599796610801023713470.7593'
     standard-page.html: GXKNFWJIMDH2FYANWPDDPNT2BSW5GTGL
     theme.css: DNX5WPZ3IH6GMGHBS6ZKQTA6WIS32S2U
