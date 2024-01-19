@@ -9,7 +9,7 @@ components:
   layout_properties: {slot: default}
   components:
   - name: label_1
-    properties: {text: Weather Dashboard, role: display}
+    properties: {text: Weather Dashboard, role: display, font_size: 35}
     type: Label
     layout_properties: {grid_position: 'EYZFZI,ITMHVA'}
   - name: flow_panel_1
