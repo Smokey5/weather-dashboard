@@ -29,11 +29,15 @@ class Form1(Form1Template):
   def refresh(self):
     times, temps, summary_data = anvil.server.call('get_forecast_data', self.location)
     self.plot_1.data = go.Figure(x=times, y=temps)
+  
     self.plot_1.layout.title = "5-day Forecast" 
+
+    low_value = summary_data['temp_min']
+    high_value = summary_data['temp_max']
     
-    self.temp_label.text = f"Currently {temps[0]}°C"
-    self.min_label.text = f"Low: {summary_data['temp_min']} °C"
-    self.max_label.text = f"High: {summary_data['temp_max']} °C"
+    self.temp_label.text = f"Currently {temps[0]:.1f}°C"
+    self.min_label.text  = f"Low: {low_value:.1f} °C"
+    self.max_label.text  = f"High: {high_value:.1f} °C"
     self.description_label.text = summary_data['description'].capitalize()
     self.icon.source = f"https://openweathermap.org/img/wn/{summary_data['icon']}@4x.png"
 
